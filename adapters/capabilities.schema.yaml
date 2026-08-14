@@ -1,0 +1,14 @@
+# Informal capability model for providers and skills.
+
+capabilities:
+  filesystem:
+    description: Can read and write workspace files.
+  shell:
+    description: Can execute shell commands.
+  web:
+    description: Can browse or search the web.
+  mcp:
+    description: Can use Model Context Protocol tools.
+  structured_tools:
+    description: Can call structured tools or functions reliably.
+

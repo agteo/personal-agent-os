@@ -1,0 +1,63 @@
+default_provider: generic
+
+providers:
+  claude:
+    name: Claude Code
+    type: cli
+    command: claude
+    adapter: adapters/claude
+    capabilities:
+      filesystem: true
+      shell: true
+      web: true
+      mcp: true
+      structured_tools: true
+
+  openai:
+    name: OpenAI Codex
+    type: cli
+    command: codex
+    adapter: adapters/openai
+    capabilities:
+      filesystem: true
+      shell: true
+      web: true
+      mcp: false
+      structured_tools: true
+
+  gemini:
+    name: Gemini CLI
+    type: cli
+    command: gemini
+    adapter: adapters/gemini
+    capabilities:
+      filesystem: true
+      shell: true
+      web: true
+      mcp: false
+      structured_tools: true
+
+  ollama:
+    name: Ollama
+    type: local
+    base_url: http://localhost:11434
+    model: qwen3
+    adapter: adapters/ollama
+    capabilities:
+      filesystem: partial
+      shell: false
+      web: false
+      mcp: false
+      structured_tools: false
+
+  generic:
+    name: Generic / configure later
+    type: manual
+    adapter: adapters/generic
+    capabilities:
+      filesystem: partial
+      shell: false
+      web: false
+      mcp: false
+      structured_tools: false
+

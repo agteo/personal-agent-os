@@ -1,0 +1,13 @@
+workspace:
+  name: My Personal Agent OS
+
+provider:
+  default: generic
+
+memory:
+  auto_update: suggest
+  maintain_index: true
+
+behaviour:
+  approval_for_destructive_actions: true
+
