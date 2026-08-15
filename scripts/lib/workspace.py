@@ -47,6 +47,7 @@ def setup_workspace(
     help_areas: str,
     provider_id: str,
     workspace_name: str = "My Personal Agent OS",
+    model: str | None = None,
 ) -> list[Path]:
     ensure_dirs(root)
     today = date.today().isoformat()
@@ -116,7 +117,7 @@ def setup_workspace(
     for path, content in files.items():
         if write_if_missing(path, content):
             created.append(path)
-    write_provider_config(root, provider_id, workspace_name)
+    write_provider_config(root, provider_id, workspace_name, model=model)
     rebuild_index(root)
     return created
 
@@ -130,4 +131,3 @@ def check_structure(root: Path) -> list[str]:
         if not (root / rel).exists():
             missing.append(rel)
     return missing
-

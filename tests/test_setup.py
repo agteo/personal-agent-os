@@ -14,6 +14,14 @@ class SetupTests(unittest.TestCase):
             self.assertTrue((root / "sources" / "inbox").exists())
             self.assertTrue((root / "config" / "config.yaml").exists())
 
+    def test_setup_can_write_openrouter_model_choice(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            setup_workspace(root, "Jamie", "Student", "writing", "openrouter", model="openrouter/free")
+            providers_yaml = (root / "config" / "providers.yaml").read_text(encoding="utf-8")
+            self.assertIn("default_provider: openrouter", providers_yaml)
+            self.assertIn("model: openrouter/free", providers_yaml)
+
     def test_existing_workspace_detection(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -26,4 +34,3 @@ class SetupTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

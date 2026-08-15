@@ -14,7 +14,7 @@ Inside this folder, your assistant can gradually learn:
 
 You own the files.
 
-The knowledge lives in this workspace, not inside one AI provider. You can use the same memory with Claude Code, OpenAI Codex, Gemini CLI, Ollama, Cursor-style coding agents, or future tools that can read and edit files.
+The knowledge lives in this workspace, not inside one AI provider. You can use the same memory with Claude Code, OpenAI Codex, Gemini CLI, Ollama, OpenRouter-backed tools, Cursor-style coding agents, or future tools that can read and edit files.
 
 ## The Big Idea
 
@@ -224,7 +224,16 @@ Supported starter providers:
 - OpenAI Codex / OpenAI-compatible coding agents
 - Gemini CLI
 - Ollama / local models
+- OpenRouter / hosted model catalog
 - Generic / configure later
+
+When you choose OpenRouter, setup offers a short model menu:
+
+- Auto Router: easiest default
+- Free Models Router: low-friction trial option
+- Latest OpenAI flagship alias
+- Latest Claude Sonnet alias
+- Custom model slug
 
 Different providers have different capabilities. This starter does not pretend they are identical.
 

@@ -50,6 +50,37 @@ providers:
       mcp: false
       structured_tools: false
 
+  openrouter:
+    name: OpenRouter
+    type: api
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    model: openrouter/auto
+    adapter: adapters/openrouter
+    model_choices:
+      - id: auto
+        label: Auto Router
+        model: openrouter/auto
+        description: Easiest default; OpenRouter routes each request to a suitable model.
+      - id: free
+        label: Free Models Router
+        model: openrouter/free
+        description: Good for trying the workspace before adding paid credits.
+      - id: openai-latest
+        label: Latest OpenAI flagship
+        model: "~openai/gpt-latest"
+        description: Use OpenAI's current flagship via OpenRouter's latest alias.
+      - id: claude-latest
+        label: Latest Claude Sonnet
+        model: "~anthropic/claude-sonnet-latest"
+        description: Use Anthropic's current Claude Sonnet family via OpenRouter.
+    capabilities:
+      filesystem: partial
+      shell: false
+      web: false
+      mcp: false
+      structured_tools: true
+
   generic:
     name: Generic / configure later
     type: manual
@@ -60,4 +91,3 @@ providers:
       web: false
       mcp: false
       structured_tools: false
-
