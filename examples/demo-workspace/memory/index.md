@@ -8,7 +8,7 @@
 
 ## Active Projects
 
-- [[projects/campus-food-app]]
+- [[projects/team-lunch-ordering]]
 
 ## People
 
@@ -16,13 +16,12 @@
 
 ## Organisations
 
-- [[organisations/campus-innovation-lab]]
+- [[organisations/workplace-innovation-circle]]
 
 ## Important Decisions
 
-- [[decisions/2026-08-10-campus-food-checkout]]
+- [[decisions/2026-08-10-team-lunch-checkout]]
 
 ## Topics
 
-- [[topics/student-food-access]]
-
+- [[topics/workday-meal-planning]]

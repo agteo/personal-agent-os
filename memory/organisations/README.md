@@ -1,4 +1,3 @@
 # Organisations
 
-Record durable information about teams, schools, companies, clubs, or other organizations.
-
+Record durable information about teams, companies, communities, clubs, or other organizations.

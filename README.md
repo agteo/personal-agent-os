@@ -65,6 +65,7 @@ Important separation:
 - `system/` contains behavior rules.
 - `skills/` contains reusable Markdown instructions for tasks.
 - `adapters/` contains provider-specific notes. The core workspace does not belong to any one provider.
+- `system/observability.md` explains how to add optional tracing without making hosted telemetry mandatory.
 
 ## Inspired By LLM Wiki
 
@@ -154,7 +155,18 @@ Default examples:
 - Change core system instructions: approval
 - Rewrite original source material: do not do this silently
 
-## Example Student Journey
+## Observability
+
+This starter includes lightweight local auditability:
+
+- visible actions in `logs/activity.md`
+- material memory updates in `logs/memory-changes.md`
+- original evidence preserved in `sources/`
+- interpreted knowledge organized in `memory/`
+
+It does not include hosted runtime tracing, token/cost dashboards, or prompt/completion capture by default. If you add Langfuse, OpenTelemetry, Braintrust, Helicone, or a similar tool, keep it optional and privacy-aware. See `system/observability.md`.
+
+## Example Journey
 
 Day 1:
 
@@ -198,7 +210,7 @@ Open:
 examples/demo-workspace/
 ```
 
-It contains a fictional student profile, project, notes, decision, and memory index. No real personal information is included.
+It contains a fictional working-adult profile, project, notes, decision, and memory index. No real personal information is included.
 
 ## Switching AI Providers
 

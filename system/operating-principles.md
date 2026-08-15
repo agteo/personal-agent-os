@@ -9,5 +9,4 @@
 7. Record important changes in logs.
 8. Ask for approval before high-impact actions.
 9. Explain provider limitations clearly.
-10. Make changes students can inspect and understand.
-
+10. Make changes users can inspect and understand.

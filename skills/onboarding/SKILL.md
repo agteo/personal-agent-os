@@ -10,7 +10,7 @@ Use after setup, or when the user says they want to onboard, personalize, or tea
 
 ## Inputs
 
-- User role or study area
+- User role, learning goals, or personal focus area
 - Typical responsibilities
 - Current projects
 - Recurring tasks
@@ -45,4 +45,3 @@ Do not save secrets or temporary remarks.
 requires:
   - filesystem
 ```
-

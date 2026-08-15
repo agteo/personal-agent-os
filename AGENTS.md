@@ -14,7 +14,7 @@ The filesystem is the source of truth. Important state should remain readable, p
 - `sources/`: original evidence supplied by the user
 - `skills/`: reusable task instructions
 - `workflows/`: repeatable sequences that combine skills
-- `system/`: behavior, safety, memory, source, and tool policies
+- `system/`: behavior, safety, memory, source, tool, and observability policies
 - `logs/`: append-friendly activity and memory-change records
 - `adapters/`: provider-specific runtime notes
 - `config/`: selected provider and small workspace settings
@@ -152,4 +152,3 @@ Avoid loading the entire workspace when a small set of files is enough.
 ## User Ownership
 
 The user should be able to open this folder and understand what the assistant has learned. Favor clear files, simple names, and explicit changes.
-

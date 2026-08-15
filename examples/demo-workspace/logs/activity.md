@@ -2,6 +2,5 @@
 
 ## 2026-08-14
 
-- Created Campus Food App project memory.
-- Added decision about showing pickup time before payment.
-
+- Created Team Lunch Ordering project memory.
+- Added decision about showing timing before payment.

@@ -68,7 +68,7 @@ def main() -> int:
     print("Welcome to your Personal Agent OS.\n")
     print("This setup creates readable Markdown memory, sources, skills, and provider config.")
     name = ask("\nWhat should your AI assistant call you?")
-    role = ask("What kind of work or study do you usually do?")
+    role = ask("What kind of work, learning, or personal projects do you usually do?")
     help_areas = ask("What are 2-3 things you would like your AI assistant to help with?")
     provider_id = choose_provider()
     model = choose_openrouter_model() if provider_id == "openrouter" else None

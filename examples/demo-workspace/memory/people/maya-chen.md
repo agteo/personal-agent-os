@@ -2,7 +2,7 @@
 
 ## Relationship
 
-Design teammate on Campus Food App.
+Design teammate on Team Lunch Ordering.
 
 ## Context
 
@@ -14,9 +14,8 @@ Maya is leading prototype usability testing.
 
 ## Sources
 
-- [[sources/notes/2026-08-09-food-app-kickoff]]
+- [[sources/notes/2026-08-09-team-lunch-kickoff]]
 
 ## Last updated
 
 2026-08-14
-
