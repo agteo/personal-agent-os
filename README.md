@@ -24,14 +24,22 @@ PERSONAL AGENT OS
 User
   |
   v
-Agent Runtime
+Agent Runtime ----- Tools
+  |                 (browsing, shell, files, connectors;
+  |                  supplied by your runtime, not this repo)
+  v
+Workspace
   |
-  |-- Rules
-  |-- Memory
-  |-- Skills
-  |-- Sources
-  `-- Tools
+  |-- Rules        system/ and AGENTS.md
+  |-- Memory       memory/
+  |-- Sources      sources/
+  |-- Skills       skills/
+  |-- Workflows    workflows/
+  |-- History      logs/
+  `-- Engine       adapters/ and config/
 ```
+
+The runtime brings the model and the tools. The workspace brings everything the model should remember and obey. You own the second half, which is why you can change runtimes without losing it.
 
 The core loop is:
 
@@ -56,9 +64,10 @@ Workflows   -> workflows/
 Rules       -> system/ and AGENTS.md
 History     -> logs/
 AI engine   -> adapters/ and config/
+Tools       -> your runtime, governed by system/tool-policy.md
 ```
 
-Tools have no folder of their own. They come from whichever runtime you connect, so this workspace defines rules for using them in `system/tool-policy.md` rather than shipping them.
+Tools are the one component with no folder. This repo ships no browsing, shell, email, or calendar access of its own, so it defines rules for using whatever your runtime provides rather than providing them.
 
 Important separation:
 
