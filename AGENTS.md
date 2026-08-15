@@ -14,7 +14,7 @@ The filesystem is the source of truth. Important state should remain readable, p
 - `sources/`: original evidence supplied by the user
 - `skills/`: reusable task instructions
 - `workflows/`: repeatable sequences that combine skills
-- `system/`: behavior, safety, memory, source, tool, and observability policies
+- `system/`: behavior, safety, memory, source, tool, sandboxing, and observability policies
 - `logs/`: append-friendly activity and memory-change records
 - `adapters/`: provider-specific runtime notes
 - `config/`: selected provider and small workspace settings
@@ -124,10 +124,13 @@ If needed context is missing, say what is missing and proceed with clearly label
 Use approval for high-impact actions:
 
 - deleting files
+- reading or writing outside this workspace
 - changing core system instructions
 - sending messages externally
 - exposing private source files to external services
 - making irreversible changes
+
+Use `system/sandboxing.md` as the workspace access policy. The agent should be scoped to this folder by default, and broader local-device access should require explicit user approval.
 
 Research, drafting, summarizing, and organizing local Markdown can usually proceed with lower friction.
 

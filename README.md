@@ -62,9 +62,10 @@ Important separation:
 
 - `sources/` contains original material supplied by you. The agent should not silently rewrite it.
 - `memory/` contains agent-maintained summaries, beliefs, preferences, project knowledge, and decisions.
-- `system/` contains behavior rules.
+- `system/` contains behavior, safety, sandboxing, and observability rules.
 - `skills/` contains reusable Markdown instructions for tasks.
 - `adapters/` contains provider-specific notes. The core workspace does not belong to any one provider.
+- `system/sandboxing.md` explains the intended workspace boundary and practical local-device safety guidance.
 - `system/observability.md` explains how to add optional tracing without making hosted telemetry mandatory.
 
 ## Inspired By LLM Wiki
@@ -154,6 +155,21 @@ Default examples:
 - Delete files: approval
 - Change core system instructions: approval
 - Rewrite original source material: do not do this silently
+
+## Sandboxing
+
+This repo does not automatically expose an agent to the whole device. The repo is a workspace convention; the actual access boundary is enforced by the runtime you use.
+
+Recommended default:
+
+- run the agent from a dedicated project folder
+- grant read/write access only to this workspace when the runtime supports it
+- treat `sources/` as the intentional import boundary
+- keep secrets out of `memory/`, `sources/`, and logs
+- require approval before reading broad external paths like `~/Documents`, `~/Desktop`, downloads, browser profiles, email exports, cloud-sync folders, or company repositories
+- require approval before sending private local content to hosted models, tracing tools, search APIs, or other external services
+
+See `system/sandboxing.md` for the full policy.
 
 ## Observability
 
