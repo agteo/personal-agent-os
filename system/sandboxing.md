@@ -42,7 +42,7 @@ Different runtimes enforce boundaries differently:
 - CLI coding agents may have filesystem permissions, shell access, and approval prompts.
 - API-hosted models have no local filesystem access unless a wrapper gives it to them.
 - Local models have no local filesystem access unless an agent runtime gives it to them.
-- Browser, email, calendar, and cloud-drive connectors can expose external account data and should be treated as separate permission surfaces.
+- Browser, email, calendar, and cloud-drive connectors can expose external account data and should be treated as separate permission surfaces. This workspace ships none of them. Material enters through `sources/` because the user put it there. If your runtime offers such connectors, connecting one is an external-account decision governed by the approval rule below.
 
 If a runtime cannot enforce sandboxing, compensate with a narrow working directory, explicit file-passing, and conservative approvals.
 

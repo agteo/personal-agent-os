@@ -58,6 +58,8 @@ History     -> logs/
 AI engine   -> adapters/ and config/
 ```
 
+Tools have no folder of their own. They come from whichever runtime you connect, so this workspace defines rules for using them in `system/tool-policy.md` rather than shipping them.
+
 Important separation:
 
 - `sources/` contains original material supplied by you. The agent should not silently rewrite it.
@@ -150,11 +152,13 @@ More automation is not always better. This starter uses clear operating modes:
 Default examples:
 
 - Research: autonomous when web/tools are available
-- Draft email: autonomous
-- Send email: approval
+- Draft a message or document in the workspace: autonomous
+- Send anything to anyone outside the workspace: approval
 - Delete files: approval
 - Change core system instructions: approval
 - Rewrite original source material: do not do this silently
+
+These are policies, not features. This starter cannot send a message, read an account, or reach any external service on its own. Whether an action is even possible depends on the runtime you connect, so the rules above describe how the agent should behave when a runtime does give it that reach.
 
 ## Sandboxing
 
@@ -190,6 +194,8 @@ You install the repository. The AI interviews you. Memory now contains your prof
 
 Day 3:
 
+Your inbox is the folder `sources/inbox/`. It is not connected to an email account. You fill it yourself by copying or dragging files in: meeting notes, an exported email thread, a PDF, a scratch text file.
+
 You drop meeting notes into `sources/inbox/` and say:
 
 ```text
@@ -197,6 +203,8 @@ Process my inbox.
 ```
 
 The agent preserves the original notes, creates summaries if useful, and updates relevant memory.
+
+This starter deliberately ships no email, calendar, or cloud-drive connector. Every runtime handles those differently, and a manual drop folder keeps the workspace portable across providers. If your runtime has its own connectors, you can still use them, but treat that as connecting an external account and apply the approval rules in `system/sandboxing.md`.
 
 Day 7:
 

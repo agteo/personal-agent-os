@@ -2,6 +2,8 @@
 
 Sources are original evidence supplied by the user.
 
+You add material here yourself by copying or dragging files in. Nothing is imported automatically, and this workspace is not connected to an email, calendar, or cloud-drive account.
+
 Use:
 
 - `sources/inbox/` for new items to process

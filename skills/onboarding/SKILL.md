@@ -28,6 +28,7 @@ Use after setup, or when the user says they want to onboard, personalize, or tea
 5. Update relevant files such as `memory/user/profile.md`, `memory/user/preferences.md`, and `memory/projects/`.
 6. Explain what memory was written.
 7. Update `memory/index.md` and `logs/memory-changes.md`.
+8. Explain how the user supplies material: copy files into `sources/inbox/`, `sources/notes/`, or `sources/documents/`. Make clear that nothing is imported automatically and that no email, calendar, or cloud-drive account is connected to this workspace.
 
 ## Output
 
